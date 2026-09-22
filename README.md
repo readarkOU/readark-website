@@ -10,7 +10,7 @@ products/juckbox.html
 privacy.html
 assets/style.css            All styling. Palette is black + white only.
 assets/site.js              Nav state, mobile menu, scroll reveal
-assets/img/                 Wordmarks (readark-white/black.png), logo mark (mark-white.png), favicon, OG image (og.png, 1200×630 for LinkedIn), (future) portraits
+assets/img/                 Wordmarks (readark-white/black.png), logo mark (mark-white.png), favicon set (favicon-16/32, icon-192/512, apple-touch-icon), OG image (og.png, 1200×630 for LinkedIn), (future) portraits
 ```
 
 ## Placeholders to fill before launch
