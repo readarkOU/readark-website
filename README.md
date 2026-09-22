@@ -37,6 +37,13 @@ After you register the company, also drop the `.ph` class so the dashed underlin
 - Section copy is plain HTML; the left column heading and the right column body are independent.
 - Keep to black and white. Greys are `rgba(255,255,255,α)` tokens at the top of `style.css`.
 
+## Deploy
+
+- Repo: https://github.com/readarkOU/readark-website
+- Every push to `main` deploys via GitHub Actions (`.github/workflows/pages.yml`) to GitHub Pages.
+- Current URL: https://readarkou.github.io/readark-website/
+- To move to **readark.eu**: once the AnnealX site has moved off the apex domain, add a `CNAME` file containing `readark.eu` at the repo root, point the domain's DNS at GitHub Pages (A records 185.199.108–111.153, or ALIAS/ANAME to `readarkou.github.io`), then set the custom domain under Settings → Pages and enable "Enforce HTTPS".
+
 ## Preview locally
 
 ```bash
