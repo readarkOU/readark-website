@@ -129,10 +129,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero-mark {
   position: absolute; top: calc(var(--nav-h) + 48px); right: var(--gutter);
-  width: clamp(96px, 14vw, 200px); opacity: 0.92;
+  height: clamp(92px, 13.4vw, 191px); opacity: 0.92;
   pointer-events: none;
 }
-.hero-mark img { width: 100%; height: auto; }
+.hero-mark img { height: 100%; width: auto; }
 .hero h1 {
   font-size: clamp(40px, 7.2vw, 104px);
   font-weight: 500;
