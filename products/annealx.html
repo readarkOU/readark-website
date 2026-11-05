@@ -44,7 +44,7 @@
     <div class="wrap">
       <div class="crumb mono"><a href="../index.html#products">Products</a><span>/</span><span>AnnealX</span></div>
       <h1>AnnealX</h1>
-      <span class="status"><i></i>Shipping</span>
+      <span class="status"><i></i>Launching soon</span>
       <p class="lede">A benchtop annealer for 3D-printed polymer parts.</p>
     </div>
   </section>
@@ -53,7 +53,7 @@
     <div class="facts reveal">
       <div><span class="mono">Category</span><strong>Industrial / lab instrument</strong></div>
       <div><span class="mono">Core discipline</span><strong>Closed-loop thermal control</strong></div>
-      <div><span class="mono">Connectivity</span><strong>Offline-first, optional WiFi</strong></div>
+      <div><span class="mono">Range</span><strong>20 to 200 °C</strong></div>
       <div><span class="mono">Market</span><strong>Makers, workshops, labs</strong></div>
     </div>
   </section>
@@ -67,15 +67,19 @@
       <div class="section-body">
         <div class="reveal">
           <h3>What it is</h3>
-          <p>AnnealX is a benchtop oven engineered for one job: bringing a 3D-printed part to a target temperature, holding it there, and cooling it in a controlled way. The user selects a material on the touchscreen and starts the run. The device tracks the full thermal profile, from a short PLA cycle to a day-long high-performance polymer soak, without supervision.</p>
+          <p>AnnealX is a benchtop oven built for one job: bringing a 3D-printed part to a target temperature, holding it there, and cooling it at the rate the polymer needs. The user picks a material on the touchscreen and presses start. The device runs the whole profile, from a two-hour PLA cycle to a twenty-hour PEEK run, and draws the planned and measured curves on screen as it goes.</p>
         </div>
         <div class="reveal">
           <h3>Why it exists</h3>
-          <p>Annealing is the single most effective post-process for making printed parts stronger and dimensionally stable, and it is usually done in kitchen ovens with guesswork. AnnealX replaces the guesswork with measured recipes. Every material profile shipped on the device traces back to a peer-reviewed paper, a national-lab study or a manufacturer datasheet, and the source is shown on the device.</p>
+          <p>Annealing is the most effective post-process for making printed parts stronger and dimensionally stable. AnnealX turns it into a recipe. Twelve material profiles ship on the device, from PLA and PETG through PA12, PA6, PC, PET-CF, PPS and PEEK to both grades of ULTEM, each with the ramps, holds and cool-down the material calls for. Sixteen custom profiles of up to sixteen steps each are composed on the touchscreen for everything else.</p>
+        </div>
+        <div class="reveal">
+          <h3>How it holds the curve</h3>
+          <p>The controller is a model-predictive PI loop with dead-time compensation, closing at 4 Hz on a K-type thermocouple. It learns the chamber's natural cooling rate across the full range and feeds it forward, so a slow cool-down is driven as precisely as a ramp up. The heater is switched by a zero-cross triac in whole mains cycles, which keeps the switching clean. Heating is capped at 3.35 °C per minute and cooling at 1.89 °C per minute, the rates the chamber holds.</p>
         </div>
         <div class="reveal">
           <h3>The idea behind it</h3>
-          <p>The ideal annealer has one job and does it exactly: it brings a part to the right temperature, holds it there, and cools it the way the polymer needs. Nothing else stands between the user and that outcome. AnnealX is our closest approach to that idea. It works fully offline, every recipe on it traces back to a source, and the engineers who designed the controller wrote the manual. Every number on the product page is a measurement.</p>
+          <p>The ideal annealer has one job and does it exactly: it brings a part to the right temperature, holds it there, and cools it the way the polymer needs. AnnealX is our closest approach to that idea. One screen, one start button, and a controller that holds the curve. It runs entirely on its own; WiFi is there so firmware updates arrive over the air. The engineers who designed the controller wrote the manual.</p>
         </div>
       </div>
     </div>

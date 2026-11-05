@@ -45,7 +45,7 @@
       <div class="crumb mono"><a href="../index.html#products">Products</a><span>/</span><span>Battery Sentinel</span></div>
       <h1>Battery Sentinel</h1>
       <span class="status dev"><i></i>In development</span>
-      <p class="lede">A smart battery disconnect for vehicles that have to start the first time.</p>
+      <p class="lede">A battery disconnect that uses the owner's phone as the key.</p>
     </div>
   </section>
 
@@ -53,7 +53,7 @@
     <div class="facts reveal">
       <div><span class="mono">Category</span><strong>Automotive aftermarket</strong></div>
       <div><span class="mono">Core discipline</span><strong>Power switching &amp; monitoring</strong></div>
-      <div><span class="mono">Connectivity</span><strong>BLE for owners, LoRa for fleets</strong></div>
+      <div><span class="mono">Connectivity</span><strong>BLE phone key, LoRaWAN telemetry</strong></div>
       <div><span class="mono">Market</span><strong>Owners and fleet operators</strong></div>
     </div>
   </section>
@@ -62,20 +62,24 @@
     <div class="wrap section-grid">
       <div class="section-head">
         <span class="mono">Summary</span>
-        <h2>Isolation that does not depend on a radio.</h2>
+        <h2>Walk away and the battery is off. Walk back and it is on.</h2>
       </div>
       <div class="section-body">
         <div class="reveal">
           <h3>What it is</h3>
-          <p>Battery Sentinel sits between the battery and the vehicle. It watches the battery's state, isolates it mechanically before a parasitic drain can flatten it, and reconnects when the owner needs the car. A Bluetooth app gives the owner status and control; a LoRa link gives fleet operators monitoring across a lot full of vehicles that are rarely driven.</p>
+          <p>Battery Sentinel sits in the positive lead of a 12 V vehicle battery: a bistable latching relay behind a 600 A shunt. The owner's phone is the key. When an enrolled phone leaves, the relay opens and the vehicle is isolated from every drain on board. When the phone comes back, the relay closes before the owner reaches the door. Up to eight phones hold keys for one vehicle, shared and revoked from the app. A second layer watches the parked vehicle itself: a drain above the limit while parked opens the relay on its own.</p>
         </div>
         <div class="reveal">
           <h3>Why it exists</h3>
-          <p>Vehicles that sit for weeks are the ones that fail to start: seasonal cars, dealer stock, rental and utility fleets. Existing disconnects are either a manual switch or an app-dependent gadget. Battery Sentinel is designed so that the isolation itself never depends on the radios, the phone or a server being available.</p>
+          <p>Vehicles that sit for weeks are the ones that fail to start: seasonal cars, dealer stock, rental and utility fleets. Battery Sentinel takes the decision off the owner. The vehicle is isolated the moment it is left and whole again the moment the owner returns.</p>
+        </div>
+        <div class="reveal">
+          <h3>What it is built from</h3>
+          <p>Automotive-grade throughout: AEC-Q100 silicon, a latching relay that draws nothing to hold its state, input protection designed to the ISO 16750-2 and ISO 7637-2 load-dump and transient levels, and a sealed glass-filled nylon enclosure. The device measures bus voltage, current and temperature, captures every crank at 500 Hz as a record of battery health, sleeps deeply while the vehicle is parked, and reports over LoRaWAN to the fleet operator's server.</p>
         </div>
         <div class="reveal">
           <h3>The idea behind it</h3>
-          <p>The ideal battery guard is one the owner forgets exists, because the vehicle always starts. Battery Sentinel is built toward that idea: the decision to isolate is made on the device, by the device, and holds whether or not a phone, a radio or a server is reachable. Wireless makes it more useful; it never becomes the condition for it to work.</p>
+          <p>The ideal battery guard is one the owner forgets exists, because the vehicle always starts. Battery Sentinel is built so that every path leads back to a connected battery. Analog interlocks on the board make disconnection impossible while the engine runs. Every automatic override reconnects. A lost radio link reconnects. A button on the enclosure fires the relay coil through hardware alone, with the microcontroller out of the loop. The phone key makes it effortless; the hardware makes it certain.</p>
         </div>
       </div>
     </div>
@@ -85,8 +89,8 @@
     <div class="wrap">
       <div class="box reveal">
         <div>
-          <h2>Details coming</h2>
-          <p>Battery Sentinel is in active development. Specifications and availability will be published here first.</p>
+          <h2>On the bench</h2>
+          <p>The first board revision is laid out and the firmware runs on the bench. Specifications and availability will be published here first.</p>
         </div>
         <!-- LINK PLACEHOLDER: replace with the Battery Sentinel product site when it launches -->
         <a class="btn btn-ghost" href="../index.html#contact">Ask about early access
