@@ -20,6 +20,11 @@
     button:hover { background: #fff; color: #000; }
     button.ok { background: #fff; color: #000; }
     .sig { background: #fff; }
+    .photo { display: flex; align-items: center; gap: 24px; }
+    .photo img { width: 96px; height: 96px; border-radius: 50%; display: block; }
+    .photo p { margin: 0; font-size: 13px; line-height: 20px; color: #6b6b6b; }
+    a.btn { display: inline-block; font-size: 13px; background: #000; color: #fff; border: 1px solid #000; padding: 8px 14px; text-decoration: none; }
+    a.btn:hover { background: #fff; color: #000; }
   </style>
 </head>
 <body>
@@ -57,6 +62,13 @@
   <tr><td style="padding:14px 0 0 0;font-size:11px;line-height:16px;color:#999999;">Karaokur OÜ, trading as readark<br>Viru väljak 2, 10111 Tallinn, Estonia &middot; Registry code 17637492</td></tr>
 </table>
 <!--/SIG-->
+      </div>
+    </div>
+    <div class="card" id="card-photo">
+      <div class="card-head"><span>Profile photo</span><a class="btn" href="../assets/img/profile-1024.png" download="readark-profile-1024.png">Save</a></div>
+      <div class="photo">
+        <img src="../assets/img/profile-1024.png" alt="readark mark on black" width="96" height="96">
+        <p>1024 × 1024 PNG, the mark on black, sized for the circular crop. Save it, then in Google Account open Personal info → Photo and upload it. Same file for both accounts.</p>
       </div>
     </div>
   </div>
