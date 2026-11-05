@@ -11,7 +11,7 @@ privacy.html
 signature/index.html         Gmail signatures for both founders, with a Copy button (unlisted, noindex)
 assets/style.css            All styling. Palette is black + white only.
 assets/site.js              Nav state, mobile menu, scroll reveal
-assets/img/                 Wordmarks (readark-white/black.png), logo mark (mark-white.png), favicon set (favicon-16/32, icon-192/512, apple-touch-icon), OG image (og.png, 1200×630 for LinkedIn), founder portraits, mail-logo.png (240×40 wordmark used by the mail signature)
+assets/img/                 Wordmarks (readark-white/black.png), logo mark (mark-white.png), favicon set (favicon-16/32, icon-192/512, apple-touch-icon), OG image (og.png, 1200×630 for LinkedIn), founder portraits, mail-logo-tile.png (wordmark on a white rounded tile, used by the mail signature so it stays visible in dark mode)
 ```
 
 ## Placeholders to fill before launch
