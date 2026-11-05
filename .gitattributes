@@ -1,0 +1,12 @@
+# Files left out of `git archive` (what scripts/deploy.sh ships to the VPS).
+# The signature page and its assets stay on GitHub Pages only.
+signature/                     export-ignore
+assets/img/mail-logo-tile.png  export-ignore
+assets/img/profile-1024.png    export-ignore
+README.md                      export-ignore
+.github/                       export-ignore
+.claude/                       export-ignore
+.gitattributes                 export-ignore
+.gitignore                     export-ignore
+deploy/                        export-ignore
+scripts/                       export-ignore

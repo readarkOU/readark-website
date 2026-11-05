@@ -1,0 +1,24 @@
+# readark.eu — static corporate site on the Contabo VPS.
+# Own compose project (/opt/readark), own network (readark_default), no published ports.
+# The JuckBox Caddy container joins readark_default and reverse-proxies readark.eu here;
+# nothing else on the server touches this, and this touches nothing else.
+name: readark
+
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: readark-site
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+    volumes:
+      - ./www:/srv:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    expose:
+      - "80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
