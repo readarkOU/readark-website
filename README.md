@@ -32,10 +32,14 @@ Company details (legal name Karaokur OÜ, registry code, address, LinkedIn links
 
 ## Deploy
 
-- Repo: https://github.com/readarkOU/readark-website
-- Every push to `main` deploys via GitHub Actions (`.github/workflows/pages.yml`) to GitHub Pages.
-- Current URL: https://readarkou.github.io/readark-website/
-- To move to **readark.eu**: once the AnnealX site has moved off the apex domain, add a `CNAME` file containing `readark.eu` at the repo root, point the domain's DNS at GitHub Pages (A records 185.199.108–111.153, or ALIAS/ANAME to `readarkou.github.io`), then set the custom domain under Settings → Pages and enable "Enforce HTTPS".
+**readark.eu** is served from the Contabo VPS (144.91.115.219), the same machine as JuckBox, in its own compartment:
+
+- `/opt/readark` on the server: `docker-compose.yml` + `nginx.conf` (copies of `deploy/`), and `www/site/` with the files. Own compose project `readark`, container `readark-site`, own network `readark_default`, no published ports.
+- JuckBox's Caddy container (owner of ports 80/443) is joined to `readark_default` and has a `readark.eu` block in `/opt/juckbox/Caddyfile`, plus the network in `/opt/juckbox/docker-compose.deploy.yml`. That is the only shared touch point; TLS comes from Caddy automatically.
+- Ship a new version with `bash scripts/deploy.sh` (ships HEAD; pass a ref to ship something else). It uses `git archive`, so `.gitattributes` decides what goes: the signature page, its assets, README and deploy files stay out.
+- DNS: `readark.eu` and `www.readark.eu` A records point at the VPS (Hostinger DNS, which also holds the Google Workspace MX records).
+
+**GitHub Pages** (https://readarkou.github.io/readark-website/) still deploys on every push to `main` via `.github/workflows/pages.yml`. It hosts the full repo including `signature/`, which the mail signatures and the profile photo link to.
 
 ## Preview locally
 
