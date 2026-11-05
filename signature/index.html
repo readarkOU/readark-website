@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>readark · Mail signatures</title>
+  <link rel="icon" href="../assets/img/favicon-32.png" type="image/png">
+  <style>
+    html { background: #fff; }
+    body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+    h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; }
+    .hint { font-size: 13px; line-height: 20px; color: #6b6b6b; margin: 0 0 40px; }
+    .hint ol { margin: 10px 0 0; padding-left: 18px; }
+    .card { border: 1px solid #e3e3e3; padding: 28px; margin: 0 0 24px; }
+    .card-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 24px; }
+    .card-head span { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    button { font: inherit; font-size: 13px; background: #000; color: #fff; border: 1px solid #000; padding: 8px 14px; cursor: pointer; }
+    button:hover { background: #fff; color: #000; }
+    button.ok { background: #fff; color: #000; }
+    .sig { background: #fff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Mail signatures</h1>
+    <p class="hint">
+      Press Copy, then in Gmail open Settings → See all settings → General → Signature, create a signature and paste. Set it for new mails and replies, save at the bottom.
+      Gmail keeps the formatting as long as you paste, not retype. The logo loads from the readark site, so it needs no attachment.
+    </p>
+
+    <div class="card" id="card-omer">
+      <div class="card-head"><span>Ömer Karaoğlu</span><button type="button" data-copy="sig-omer">Copy</button></div>
+      <div class="sig" id="sig-omer">
+<!--SIG-->
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#000000;">
+  <tr><td style="padding:0 0 14px 0;"><a href="https://readark.eu" target="_blank" style="text-decoration:none;border:0;"><img src="https://readarkou.github.io/readark-website/assets/img/mail-logo.png" width="120" height="20" alt="readark" style="display:block;border:0;outline:none;width:120px;height:20px;"></a></td></tr>
+  <tr><td style="padding:0;font-size:14px;line-height:20px;color:#000000;font-weight:bold;">Ömer Karaoğlu</td></tr>
+  <tr><td style="padding:0 0 12px 0;font-size:13px;line-height:18px;color:#6b6b6b;">Co-founder &amp; CTO</td></tr>
+  <tr><td style="padding:0;font-size:13px;line-height:18px;color:#000000;"><a href="https://readark.eu" target="_blank" style="color:#000000;text-decoration:none;">readark.eu</a><span style="color:#b3b3b3;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="https://www.linkedin.com/in/omer-karaoglu/" target="_blank" style="color:#000000;text-decoration:none;">LinkedIn</a></td></tr>
+  <tr><td style="padding:14px 0 0 0;font-size:11px;line-height:16px;color:#999999;">Karaokur OÜ, trading as readark<br>Viru väljak 2, 10111 Tallinn, Estonia &middot; Registry code 17637492</td></tr>
+</table>
+<!--/SIG-->
+      </div>
+    </div>
+
+    <div class="card" id="card-ozan">
+      <div class="card-head"><span>Ozan Okur</span><button type="button" data-copy="sig-ozan">Copy</button></div>
+      <div class="sig" id="sig-ozan">
+<!--SIG-->
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#000000;">
+  <tr><td style="padding:0 0 14px 0;"><a href="https://readark.eu" target="_blank" style="text-decoration:none;border:0;"><img src="https://readarkou.github.io/readark-website/assets/img/mail-logo.png" width="120" height="20" alt="readark" style="display:block;border:0;outline:none;width:120px;height:20px;"></a></td></tr>
+  <tr><td style="padding:0;font-size:14px;line-height:20px;color:#000000;font-weight:bold;">Ozan Okur</td></tr>
+  <tr><td style="padding:0 0 12px 0;font-size:13px;line-height:18px;color:#6b6b6b;">Co-founder &amp; CEO</td></tr>
+  <tr><td style="padding:0;font-size:13px;line-height:18px;color:#000000;"><a href="https://readark.eu" target="_blank" style="color:#000000;text-decoration:none;">readark.eu</a><span style="color:#b3b3b3;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="https://www.linkedin.com/in/ozan-okur-6827383a/" target="_blank" style="color:#000000;text-decoration:none;">LinkedIn</a></td></tr>
+  <tr><td style="padding:14px 0 0 0;font-size:11px;line-height:16px;color:#999999;">Karaokur OÜ, trading as readark<br>Viru väljak 2, 10111 Tallinn, Estonia &middot; Registry code 17637492</td></tr>
+</table>
+<!--/SIG-->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll("button[data-copy]").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var node = document.getElementById(btn.dataset.copy);
+        var html = node.innerHTML.trim();
+        var text = node.innerText.trim();
+        var done = false;
+        try {
+          if (navigator.clipboard && window.ClipboardItem) {
+            await navigator.clipboard.write([new ClipboardItem({
+              "text/html": new Blob([html], { type: "text/html" }),
+              "text/plain": new Blob([text], { type: "text/plain" })
+            })]);
+            done = true;
+          }
+        } catch (e) {}
+        if (!done) {
+          var range = document.createRange();
+          range.selectNodeContents(node);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          try { done = document.execCommand("copy"); } catch (e) {}
+          sel.removeAllRanges();
+        }
+        btn.textContent = done ? "Copied" : "Select the signature and press ⌘C";
+        btn.classList.toggle("ok", done);
+        setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("ok"); }, 2200);
+      });
+    });
+  </script>
+</body>
+</html>
